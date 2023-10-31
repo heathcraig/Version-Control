@@ -21,6 +21,18 @@ def encode(input):
         output_list.append(i)
     return output_list
 
+def decode(enc_pass):
+    t = ''
+    for i in enc_pass:
+        if i < 4:
+            i += 7
+            i = str(i)
+            t += i
+        else:
+            i -= 3
+            i = str(i)
+            t += i
+    return t
 
 
 
